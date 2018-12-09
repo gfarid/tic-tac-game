@@ -18,7 +18,8 @@ export class TicTicBoradComponent implements OnInit {
   isWinner;
   winner;
   actions = 0;
-
+  matrixDimension = 3;
+  
   constructor(private helperService: HelperService){}
  
   clearBoard() {
@@ -43,8 +44,8 @@ export class TicTicBoradComponent implements OnInit {
   }
 
   ngOnInit() {
-    for (let index = 0; index < 9; index++) {
-      this.board.push(new CellData(Math.floor((index / 3)), index % 3, PlaceMode.None));
+    for (let index = 0; index < this.matrixDimension*this.matrixDimension; index++) {
+      this.board.push(new CellData(Math.floor((index / this.matrixDimension)), index % this.matrixDimension, PlaceMode.None));
     }
   }
   

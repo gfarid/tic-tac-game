@@ -8,6 +8,8 @@ import { PlaceMode } from '../model/enums/placeMode';
   styleUrls: ['./tic-tac-cell.component.scss']
 })
 export class TicTacCellComponent {
+  Player1 = PlaceMode.Player1 ;
+  Player2 = PlaceMode.Player2 ;
 
   @Input('value')
   cellData: CellData;
