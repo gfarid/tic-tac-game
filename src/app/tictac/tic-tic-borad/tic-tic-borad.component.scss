@@ -1,0 +1,48 @@
+$white : #fff; 
+$black : #000; 
+$size:100px;
+
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td {
+    height: $size;
+    width: $size;
+}
+
+.table,td,tr {
+    border: 1px solid $black;
+}
+
+.reset {
+    margin: 30px auto 10px auto;
+    display: block;
+    font-size: 20px;
+    border-radius: 5px;
+    background: antiquewhite;
+    outline: 0;
+    &:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+}
+
+.winner,.no-winner {
+    font-size: 40px;
+    color: $white;
+    font-weight: bold;
+    text-align: center;
+    background: $black;
+    width:500px;
+    margin: 0 auto;
+}
+
+.info {
+    text-align: center;
+    width: 120px;
+    margin: 0 auto 20px ;
+    color: $black;
+}

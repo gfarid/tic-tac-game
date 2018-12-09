@@ -1,0 +1,14 @@
+<div class="info">
+  <p>player 1 === O</p>
+  <p>player 2 === X</p>
+</div>
+<table class="table">
+  <tr *ngFor="let row of rows">
+    <td *ngFor="let column of columns">
+        <app-tic-tac-cell (onCellClick)="cellClick($event)" [value]="board[3*row + column %3 ]"></app-tic-tac-cell>
+    </td>
+  </tr> 
+</table>
+<button  (click)="clearBoard()" class="reset">Reset Board</button>
+<div class="winner" *ngIf="isWinner">{{'Player Number ' + winner + ' Win!!!' }}</div>
+<div class="no-winner" *ngIf="actions===9 && !isWinner">{{'NO Winner!!!!'}}</div>
